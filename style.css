@@ -1,0 +1,319 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #0f1111;
+    color: white;
+}
+
+.nav-logo {
+    height: 50px;
+    width: 113px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    background-image: url('./amazon_logo.png');
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+
+.nav-logo:hover {
+    border: 2px solid white;
+    border-radius: 4px;
+}
+
+/* Address Section */
+.add-icon {
+    display: flex;
+    align-items: center;
+}
+
+.add-first {
+    color: #cccccc;
+    font-size: 0.9rem;
+    padding-left: 15px;
+}
+
+.add-second {
+    font-size: 1rem;
+    padding-left: 3px;
+}
+
+.nav-address:hover {
+    border: 2px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Search Bar */
+.nav-search {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    height: 40px;
+    width: 620px;
+    border-radius: 4px;
+}
+
+.search-select {
+    background-color: #f3f3f3;
+    border: none;
+    width: 50px;
+    text-align: center;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.search-input {
+    flex-grow: 1;
+    border: none;
+    font-size: 1rem;
+    padding: 5px;
+}
+
+.search-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    background-color: rgb(255, 187, 0);
+    color: #0f1111;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    cursor: pointer;
+    height: 100%;
+}
+
+/* Sign-In and Cart Section */
+.nav-signin, .nav-cart {
+    text-align: center;
+    cursor: pointer;
+}
+
+.nav-signin:hover, .nav-cart:hover {
+    border: 2px solid white;
+    border-radius: 4px;
+}
+
+/* Panel */
+.panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color: #222f3d;
+    color: white;
+}
+
+.panel-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.panel-options p {
+    cursor: pointer;
+}
+
+.panel-options p:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url('./images/hero_image.jpg');
+    background-size: cover;
+    background-position: start;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hero-message {
+    width: 90%;
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-size: 0.85rem;
+    padding: 10px;
+    position: relative;
+    bottom: 20px;
+}
+
+.hero-message a {
+    color: #007185;
+    text-decoration: underline;
+}
+
+/* Shop Section */
+.shop-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 20px;
+    background-color: #d4dbd9;
+}
+
+.box {
+    width: 23%;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.box-image {
+    margin: 10px auto;
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.box-content {
+    margin-top: 10px;
+}
+
+.box-content h2 {
+    margin-bottom: 10px;
+}
+
+.box-content p:hover {
+    text-decoration: underline;
+}
+
+/* Sign-In Section */
+.sign-in {
+    text-align: center;
+    padding: 20px;
+}
+
+.sign-in button {
+    width: 220px;
+    padding: 10px;
+    font-weight: bold;
+    background-color: rgb(252, 180, 46);
+    border: none;
+    border-radius: 5px;
+}
+
+.sign-in button:hover {
+    background-color: orange;
+}
+
+.sign-in a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #222f3d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .nav-search {
+        width: 80%;
+    }
+
+    .shop-section .box {
+        width: 45%;
+    }
+
+    .hero-section {
+        height: 250px;
+    }
+
+    .hero-message {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nav-search {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .shop-section .box {
+        width: 100%;
+    }
+
+    .hero-section {
+        height: 200px;
+    }
+
+    .hero-message {
+        font-size: 0.7rem;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-logo {
+        width: 80px;
+        height: 40px;
+    }
+
+    .nav-search {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .search-input {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .shop-section .box {
+        width: 95%;
+    }
+
+    .hero-section {
+        height: 150px;
+    }
+
+    .hero-message {
+        font-size: 0.6rem;
+    }
+
+    .sign-in button {
+        width: 90%;
+    }
+}
